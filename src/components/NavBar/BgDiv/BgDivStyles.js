@@ -6,8 +6,8 @@ export const BgDivWrapper = styled.div`
   top: -1000px;
   left: -1000px;
   width: 100%;
-  height: 100%;
-  z-index: -1;
+  height: 100vh;
+  z-index: 300;
   transition: all 0.6s ease;
 
   &.active {

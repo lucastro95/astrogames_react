@@ -1,8 +1,14 @@
 import React from 'react'
+import Categorias from '../../components/Categories/Categorias'
+import Productos from '../../components/Productos/Productos'
+import { ProductsWrapper } from './ProductsStyles'
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <ProductsWrapper>
+      <Categorias />
+      <Productos />
+    </ProductsWrapper>
   )
 }
 

@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <HomeWrapper>
       <HomeInfo />
-      <img src={require("../../images/home-img.png")} alt="Headphones" />
+      <img src="https://i.ibb.co/LSswmjR/home-img.png" alt="Headphones" />
     </HomeWrapper>
   )
 }

@@ -1,20 +1,28 @@
 import styled from "styled-components";
-import img from "../../images/bg.jpg";
 
 export const HomeWrapper = styled.section`
   padding-top: 100px;
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  height: auto;
   padding: 3rem 5rem;
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: -2;
-  background: url(${img});
+  background: url("https://i.ibb.co/JscR0Ws/bg.jpg");
   background-size: cover;
 
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+
   img {
-    width: 40%;
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
   }
 `;

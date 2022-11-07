@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const NavBarWrapper = styled.nav`
+  height: 100px;
+  padding: 1.4rem;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 500;
+
   h2 {
     font-weight: 400;
     color: #fff;
@@ -9,14 +18,6 @@ export const NavBarWrapper = styled.nav`
       font-size: 1.5rem;
     }
   }
-
-  height: 100px;
-  padding: 1.4rem;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 100;
 
   a {
     color: #fff;
@@ -66,7 +67,7 @@ export const NavBarWrapper = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    top: 40vh;
     left: 0;
     right: 0;
     text-align: center;

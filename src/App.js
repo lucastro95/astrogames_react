@@ -1,8 +1,9 @@
-import './App.css';
-import Footer from './components/Footer/Footer';
-import NavBar from './components/NavBar/NavBar';
+import "./App.css";
 
-import Routes from './routes/Routes';
+import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar/NavBar";
+
+import Routes from "./routes/Routes";
 
 function App() {
   return (
