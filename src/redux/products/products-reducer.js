@@ -1,7 +1,8 @@
-import { Products } from "../../data/Products";
+import { Products, TotalProducts } from "../../data/Products";
 
 const INITIAL_STATE = {
-    products: Products
+    products: Products,
+    totalProducts: TotalProducts
 }
 
 const productsReducer = (state = INITIAL_STATE, action) => {

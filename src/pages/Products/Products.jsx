@@ -1,15 +1,60 @@
-import React from 'react'
-import Categorias from '../../components/Categories/Categorias'
-import Productos from '../../components/Productos/Productos'
-import { ProductsWrapper } from './ProductsStyles'
+import React from "react";
+import { useState } from "react";
+import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import * as categoriesAction from "../../redux/categories/categories-actions";
+
+import Categorias from "../../components/Categories/Categorias";
+import Productos from "../../components/Productos/Productos";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { ProductsWrapper } from "./ProductsStyles";
 
 const Products = () => {
+  const [value, setValue] = useState("");
+
+  const productsRef = useRef();
+  const dispatch = useDispatch();
+
+  const listOfCategories = useSelector(
+    (state) => state.categories.categories
+  ).map((category) => category.category);
+
+  const doScroll = () => {
+    window.scrollTo(
+      productsRef.current.getBoundingClientRef().x,
+      productsRef.current.getBoundingClientRef().y
+    );
+  };
+
+  const handleSubmit = (e, value) => {
+    e.preventDefault();
+
+    const newCategory = value.trim().toLowerCase().split(" ").join("");
+
+    const selectedCategory = listOfCategories.find(
+      category => category.toLowerCase() === newCategory
+    );
+
+    if (selectedCategory) {
+      dispatch(categoriesAction.selectCategory(selectedCategory));
+    } else {
+      return alert("Categoría no encontrada");
+    }
+
+    setValue("");
+  };
+
   return (
     <ProductsWrapper>
       <Categorias />
+      <SearchBar
+        value={value}
+        setValue={setValue}
+        handleSubmit={handleSubmit}
+      />
       <Productos />
     </ProductsWrapper>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

@@ -49,3 +49,33 @@ export const ProductoCard = styled.div`
         }
     }
 `
+
+export const ButtonsWrapper = styled.div`
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        padding: .2rem .5rem;
+        margin: 3rem;
+        background-color: #02b3ab;
+        border: 2px solid #02b3ab;
+        color: #FFFFFF;
+        transition: all .2s;
+
+        :hover {
+            background-color: #FFFFFF;
+            color: #02b3ab;
+            cursor: pointer;
+        }
+
+        :disabled {
+            background-color: #679C9A;
+            border: 2px solid #679C9A;
+            color: #D8D8D8;
+            cursor: default;
+        }
+    }
+`
