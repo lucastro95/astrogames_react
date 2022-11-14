@@ -8,6 +8,7 @@ import Categorias from "../../components/Categories/Categorias";
 import Productos from "../../components/Productos/Productos";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { ProductsWrapper } from "./ProductsStyles";
+import swal from "sweetalert";
 
 const Products = () => {
   const [value, setValue] = useState("");
@@ -38,7 +39,13 @@ const Products = () => {
     if (selectedCategory) {
       dispatch(categoriesAction.selectCategory(selectedCategory));
     } else {
-      return alert("Categoría no encontrada");
+      return (
+        swal({
+          text: "No se encontraron productos con esa categoría",
+          icon: "warning",
+          button: "Entendido"
+        })
+      )
     }
 
     setValue("");

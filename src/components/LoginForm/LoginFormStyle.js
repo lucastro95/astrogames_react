@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoginFormWrapper = styled.div`
-  height: 75vh;
+  height: auto;
   width: 30%;
   padding: 2rem;
   background: rgba(20, 223, 223, 0.2);
@@ -23,6 +23,10 @@ export const LoginFormWrapper = styled.div`
     font-size: 1.5rem;
     color: #cf0281;
     margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
   }
 
   p {
@@ -37,6 +41,10 @@ export const LoginFormWrapper = styled.div`
 
     &:hover {
       cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
     }
   }
 
@@ -69,6 +77,10 @@ export const LoginFormWrapper = styled.div`
 
         &::placeholder {
             color: #FFFFFF;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
         }
     }
   }

@@ -8,10 +8,6 @@ export const FooterWrapper = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 768px) {
-            height: calc(100vh - 100px);
-        }
     
     iframe {
         width: 30%;

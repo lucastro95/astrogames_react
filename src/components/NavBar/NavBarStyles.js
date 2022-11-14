@@ -33,6 +33,7 @@ export const NavBarWrapper = styled.nav`
 
   .links {
     position: absolute;
+    width: 60%;
     top: -700px;
     left: -2000px;
     right: 0;
@@ -67,7 +68,7 @@ export const NavBarWrapper = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 40vh;
+    top: 30vh;
     left: 0;
     right: 0;
     text-align: center;
@@ -75,6 +76,24 @@ export const NavBarWrapper = styled.nav`
       font-size: 2rem;
       margin-top: 1rem;
       color: #fff;
+    }
+  }
+
+  .cart {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    margin-left: -1rem;
+    margin-top: -.8rem;
+    background-color: #cf0281;
+    border-radius: 50%;
+    display: inline;
+    
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `;
