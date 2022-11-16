@@ -6,21 +6,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as cartActions from "../../redux/cart/cart-actions";
 
 
-const CartItem = () => {
+const CartItem = ({ img, name, price, quantity, id }) => {
   const { cartItems } = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
 
   return (
     <CartCard>
-        <img src="https://i.ibb.co/SrVPtcz/mouse1.png" alt="" />
-        <h4>Mouse ZN-900</h4>
+        <img src={img} alt={name} />
+        <h4>{name}</h4>
         <div>
             <button onClick={() => dispatch(cartActions.clearCart())} disabled={!cartItems.length}><ImBin /></button>
-            <p>1</p>
-            <button>+</button>
+            <p>{quantity}</p>
+            <button onClick={() =>
+            dispatch(cartActions.addToCart({ img, name, price, id }))
+          }>+</button>
         </div>
-        <p>$900</p>
+        <p>${price}</p>
     </CartCard>
   )
 }

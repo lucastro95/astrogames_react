@@ -53,6 +53,7 @@ export const CartWrapper = styled.section`
             background-color: #cf0281;
             color: #FFF;
             border: 2px solid #cf0281;
+            text-decoration: none;
             transition: all .3s;
 
             :hover {

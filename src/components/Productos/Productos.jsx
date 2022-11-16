@@ -14,8 +14,6 @@ const Productos = () => {
     (state) => state.categories.selectedCategories
   );
 
-  console.log(selectedCategory);
-
   const totalProducts = useSelector((state) => state.products.totalProducts);
 
   if (selectedCategory) {

@@ -50,7 +50,7 @@ const NavBar = () => {
             <>
               <Link to="/">Home</Link>
               <Link to="/products">Productos</Link>
-              <Link to={currentUser ? "/" : "/login"}>
+              <Link to={currentUser ? "/profile" : "/login"}>
                 <BsFillPersonFill style={{marginRight:'.5rem', fontSize:'1.5rem'}} />
                 {currentUser ? `${currentUser.displayName}` : "Iniciar Sesión"}
               </Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
               <Link to="/products" onClick={handleClick}>
                 Productos
               </Link>
-              <Link to={currentUser ? "/" : "/login"} onClick={handleClick}><BsFillPersonFill style={{marginRight:'.5rem'}} />{currentUser ? `${currentUser.displayName}` : "Iniciar Sesión"}</Link>
+              <Link to={currentUser ? "/profile" : "/login"} onClick={handleClick}><BsFillPersonFill style={{marginRight:'.5rem'}} />{currentUser ? `${currentUser.displayName}` : "Iniciar Sesión"}</Link>
               <Link to="/cart" onClick={handleClick}><BsCart4 style={{marginRight:'.5rem'}}/><div className="cart">{totalCartItems}</div> Carrito</Link>
             </>
           )}

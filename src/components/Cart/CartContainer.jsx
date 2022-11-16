@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const CartContainer = () => {
-  const { cartItems, shippingCost } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
 
   const totalCartItems = useSelector((state) => state.cart.cartItems).reduce(
     (acc, item) => (acc += item.quantity),
@@ -23,7 +23,7 @@ const CartContainer = () => {
           {cartItems.map((item) => (
             <>
               <CartItem key={item.id} {...item} />
-              <div className="line" style={{ width: "100%" }}></div>
+              <div key={item.name} className="line" style={{ width: "100%" }}></div>
             </>
           ))}
         </>

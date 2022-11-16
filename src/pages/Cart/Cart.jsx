@@ -2,8 +2,11 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import CartContainer from '../../components/Cart/CartContainer'
 import { CartWrapper } from './CartStyles'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+  const navigate = useNavigate();
+
   const { cartItems, shippingCost } = useSelector(state => state.cart);
 
   const totalPrice = cartItems.reduce((acc, item) => {
@@ -21,7 +24,7 @@ const Cart = () => {
                 <p>Envío : {shippingCost}</p>
                 <hr />
                 <p>Total : ${totalPrice + shippingCost}</p>
-                <button disabled={cartItems.length ? false : true}>Pagar</button>
+                <button disabled={cartItems.length ? false : true} onClick={() => navigate('/checkout')}>Pagar</button>
             </div>
         </div>
     </CartWrapper>

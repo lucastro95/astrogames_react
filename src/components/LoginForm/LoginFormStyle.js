@@ -16,8 +16,8 @@ export const LoginFormWrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
-      width: 80%;
-    } 
+    width: 80%;
+  }
 
   h3 {
     font-size: 1.5rem;
@@ -30,14 +30,18 @@ export const LoginFormWrapper = styled.div`
   }
 
   p {
-    color: #FFFFFF;
+    color: #ffffff;
+  }
+
+  a {
+    color: #cf0281;
   }
 
   .google {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
-    padding: .3rem .5rem;
+    padding: 0.3rem 0.5rem;
 
     &:hover {
       cursor: pointer;
@@ -49,15 +53,15 @@ export const LoginFormWrapper = styled.div`
   }
 
   .form-btn {
-    margin-top: 1rem;
-    padding: .3rem .5rem;
+    margin: 1rem 0;
+    padding: 0.3rem 0.5rem;
     background-color: #cf0281;
-    color: #FFFFFF;
+    color: #ffffff;
     border: none;
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 .5rem 0 #cf0281;
+      box-shadow: 0 0 0.5rem 0 #cf0281;
     }
   }
 
@@ -68,20 +72,20 @@ export const LoginFormWrapper = styled.div`
     align-items: center;
 
     input {
-        width: 80%;
-        margin-top: 1rem;
-        padding: .3rem .5rem;
-        background-color: transparent;
-        border: 2px solid #cf0281;
-        box-shadow: 0 0 .5rem 0 #cf0281;
+      width: 80%;
+      margin-top: 1rem;
+      padding: 0.3rem 0.5rem;
+      background-color: transparent;
+      border: 2px solid #cf0281;
+      box-shadow: 0 0 0.5rem 0 #cf0281;
 
-        &::placeholder {
-            color: #FFFFFF;
-        }
+      &::placeholder {
+        color: #ffffff;
+      }
 
-        @media (max-width: 768px) {
-          width: 100%;
-        }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 `;
