@@ -36,5 +36,8 @@ export const ProfileCard = styled.div`
     img {
         border-radius: 50%;
         margin-right: 3rem;
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
     }
 `

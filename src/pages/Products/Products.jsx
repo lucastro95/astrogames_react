@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as categoriesAction from "../../redux/categories/categories-actions";
 
@@ -13,19 +12,11 @@ import swal from "sweetalert";
 const Products = () => {
   const [value, setValue] = useState("");
 
-  const productsRef = useRef();
   const dispatch = useDispatch();
 
   const listOfCategories = useSelector(
     (state) => state.categories.categories
   ).map((category) => category.category);
-
-  const doScroll = () => {
-    window.scrollTo(
-      productsRef.current.getBoundingClientRef().x,
-      productsRef.current.getBoundingClientRef().y
-    );
-  };
 
   const handleSubmit = (e, value) => {
     e.preventDefault();
