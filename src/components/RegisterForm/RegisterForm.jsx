@@ -1,6 +1,7 @@
 import React from "react";
 import { RegisterFormWrapper } from "./RegisterFormStyles";
 import { FcGoogle } from "react-icons/fc";
+import swal from 'sweetalert';
 
 import { Formik } from "formik";
 import { useLocation, Link } from "react-router-dom";
@@ -20,12 +21,15 @@ const RegisterForm = () => {
         initialValues={registerInitialValues}
         validationSchema={registerValidationSchema}
         onSubmit={async (values, actions) => {
-          console.log("enviado");
           try {
             await createUser(values.email, values.password, values.name);
           } catch (error) {
             if (error.code === "auth/email-already-in-use") {
-              alert("Mail en uso");
+              swal({
+                title: "El email encontrado ya está en uso",
+                text: "Intente nuevamente",
+                icon: "warning",
+              })
             }
           }
           actions.resetForm();

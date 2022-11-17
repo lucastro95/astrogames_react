@@ -5,6 +5,7 @@ export const ProfileWrapper = styled.section`
     min-height: calc(100vh - 100px);
     background-color: #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `

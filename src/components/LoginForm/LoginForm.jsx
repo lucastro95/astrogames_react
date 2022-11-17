@@ -1,6 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
 
 import { Link } from "react-router-dom";
+import swal from 'sweetalert';
 
 import { LoginFormWrapper } from "./LoginFormStyle";
 import { Formik } from "formik";
@@ -27,10 +28,18 @@ const LoginForm = () => {
             createUserProfileDocument(user);
           } catch (error) {
             if (error.code === "auth/wrong-password") {
-              alert("Contraseña incorrecta");
+              swal({
+                title: "Contraseña incorrecta",
+                text: "Intente nuevamente",
+                icon: "error",
+              })
             }
             if (error.code === "auth/user-not-found") {
-              alert("Usuario no encontrado");
+              swal({
+                title: "Usuario no encontrado",
+                text: "Intente nuevamente",
+                icon: "error",
+              })
             }
           }
         }}
