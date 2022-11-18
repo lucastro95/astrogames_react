@@ -1,6 +1,6 @@
 import React from "react";
 import { FormWrapper } from "./CheckoutFormStyles";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 import { Formik } from "formik";
 
@@ -40,7 +40,7 @@ const CheckoutForm = ({ cartItems, price, shippingCost }) => {
               text: "Tu orden ha sido creada",
               icon: "success",
             }).then((value) => {
-              navigate('/profile');
+              navigate("/profile");
             });
             dispatch(cartActions.clearCart());
           } catch (error) {
@@ -48,7 +48,7 @@ const CheckoutForm = ({ cartItems, price, shippingCost }) => {
               title: "Error al crear tu orden",
               text: "Intente nuevamente",
               icon: "error",
-            })
+            });
           }
         }}
       >

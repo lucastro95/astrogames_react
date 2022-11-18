@@ -9,6 +9,7 @@ import Products from "../pages/Products/Products";
 import Profile from "../pages/Profile/Profile";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import Register from "../pages/Register/Register";
+import Resumen from "../pages/Resumen/Resumen";
 
 
 function Routes() {
@@ -18,6 +19,8 @@ function Routes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path='/resumen/:orderId' element={<Resumen />} />
+
       <Route
         path="/checkout"
         element={

@@ -23,7 +23,7 @@ const CartContainer = () => {
           {cartItems.map((item) => (
             <>
               <CartItem key={item.id} {...item} />
-              <div key={item.name} className="line" style={{ width: "100%" }}></div>
+              <div key={Date.now()} className="line" style={{ width: "100%" }}></div>
             </>
           ))}
         </>
