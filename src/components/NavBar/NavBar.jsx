@@ -38,7 +38,7 @@ const NavBar = () => {
         >
           <Link to='/' style={{ height: "100%"}}>
             <img
-              src="https://i.ibb.co/wJvrTB6/logo.png"
+              src="https://res.cloudinary.com/duafuhu8k/image/upload/v1668786936/astrogames/logo_y6vajp.png"
               alt="logo"
               style={{ height: "100%", marginRight: "1rem" }}
             />

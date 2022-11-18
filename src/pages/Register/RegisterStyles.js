@@ -4,7 +4,7 @@ export const RegisterWrapper = styled.div`
     margin: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background: url("https://i.ibb.co/n7SYMq5/login-bg.jpg");
+    background: url("https://res.cloudinary.com/duafuhu8k/image/upload/v1668786918/astrogames/login-bg_obw0hd.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

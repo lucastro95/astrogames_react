@@ -16,7 +16,7 @@ const Footer = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <Link to="/">
-        <img src="https://i.ibb.co/wJvrTB6/logo.png" alt="logo" />
+        <img src="https://res.cloudinary.com/duafuhu8k/image/upload/v1668786936/astrogames/logo_y6vajp.png" alt="logo" />
         </Link>
 
         <IconContext.Provider value={{ color: "#FFF", size: "40px" }}>

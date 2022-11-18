@@ -11,7 +11,7 @@ export const HomeWrapper = styled.section`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: url("https://i.ibb.co/JscR0Ws/bg.jpg");
+  background: url("https://res.cloudinary.com/duafuhu8k/image/upload/v1668786927/astrogames/bg_psfptl.jpg");
   background-size: cover;
 
   @media (max-width: 768px) {

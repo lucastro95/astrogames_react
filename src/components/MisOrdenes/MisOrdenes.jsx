@@ -5,7 +5,6 @@ import { MisOrdenesWrapper } from "./MisOrdenesStyles";
 
 import { useSelector, useDispatch } from "react-redux";
 import * as ordersActions from "../../redux/orders/orders-actions";
-import { useNavigate } from "react-router-dom";
 
 const MisOrdenes = () => {
   const currentUser = useSelector((state) => state.user.currentUser);

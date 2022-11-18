@@ -15,9 +15,9 @@ const Profile = () => {
       <ProfileCard>
         <img
           src={
-            currentUser.photoURL
+            currentUser.photoURL || currentUser.photoURL !== null
               ? currentUser.photoURL
-              : "https://i.ibb.co/tqZthhy/not-found.jpg"
+              : "https://res.cloudinary.com/duafuhu8k/image/upload/v1668786918/astrogames/not-found_ldatrh.jpg"
           }
           alt="Foto Perfil"
         />
